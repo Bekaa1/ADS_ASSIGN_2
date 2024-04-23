@@ -107,10 +107,12 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public T[] toArray() {
-        T[] result = (T[]) new Object[size]; // Создаем массив типа T с размером списка
-        System.arraycopy(arr, 0, result, 0, size); // Копируем элементы списка в массив
-        return result; // Возвращаем массив типа T
+        @SuppressWarnings("unchecked")
+        T[] result = (T[]) new Object[size];
+        System.arraycopy(arr, 0, result, 0, size);
+        return result;
     }
+
 
     @Override
     public void clear() {
