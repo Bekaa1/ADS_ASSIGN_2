@@ -44,15 +44,8 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public void addFirst(T item) {
-        Node<T> newNode = new Node<>(item);
 
-        newNode.next = head;
-        head = newNode;
-
-
-        size++;
     }
-
 
     @Override
     public void addLast(T item) {
