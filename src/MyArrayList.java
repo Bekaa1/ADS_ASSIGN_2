@@ -22,8 +22,8 @@ public class MyArrayList<T> implements MyList<T> {
         if (size >= arr.length) {
             increaseBuffer();
         }
-        arr[size++] = item;
         System.out.println(arr.length);
+        arr[size++] = item;
     }
 
 
@@ -44,8 +44,15 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public void addFirst(T item) {
+        Node<T> newNode = new Node<>(item);
 
+        newNode.next = head;
+        head = newNode;
+
+
+        size++;
     }
+
 
     @Override
     public void addLast(T item) {
@@ -116,7 +123,7 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public void clear() {
-
+        return null;
     }
 
     @Override
