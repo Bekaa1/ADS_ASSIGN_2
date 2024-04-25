@@ -116,7 +116,7 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public void clear() {
-        return null;
+
     }
 
     @Override
